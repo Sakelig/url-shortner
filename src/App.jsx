@@ -1,10 +1,11 @@
 import './App.css'
+import UrlConverter from './components/UrlConverter'
 
 function App() {
 
   return (
     <>
-  <div>test</div>
+      <UrlConverter/>
     </>
   )
 }
