@@ -4,6 +4,7 @@ import './UrlConverter.css'
 const UrlConverter = () => {
   function handleSubmit() {
     console.log("clicked")
+    setShortenedUrl(url)
   }
 
   function handleChange(e) {
@@ -12,6 +13,7 @@ const UrlConverter = () => {
   }
 
   const [url, setUrl] = useState('')
+  const [shortenedUrl, setShortenedUrl] = useState('')
 
   return (
     <div>
@@ -19,7 +21,7 @@ const UrlConverter = () => {
         URL: <input name="myInput" onChange={handleChange}/>
       </label>
       <button onClick={handleSubmit}>SHORTEN!</button>
-      <div className="output">Shortened</div>
+      <div className="output">{shortenedUrl}</div>
     </div>
   )
 }
